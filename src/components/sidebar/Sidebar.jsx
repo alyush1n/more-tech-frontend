@@ -1,6 +1,7 @@
 import React from 'react';
 import './sidebar.css'
 import DescriptionIcon from "@mui/icons-material/Description";
+import {Link} from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -9,10 +10,12 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Данные</h3>
                     <ul className="sidebarList">
+                        <Link to="/datasets" className="link">
                         <li className="sidebarListItem active">
                             <DescriptionIcon className="sidebarIcon"/>
                             Датасеты
                         </li>
+                        </Link>
                     </ul>
                 </div>
             </div>

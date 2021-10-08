@@ -1,0 +1,26 @@
+.dataset {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    margin-right: 32px;
+}
+
+.datasetWrapper {
+    background-color: white;
+    width: 100%;
+    height: 64px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+}
+
+.datasetWrapper:hover {
+    background-color: #e3e3e3;
+}
+
+.datasetWrapper:active {
+    background-color: #477eff;
+    color: white;
+}

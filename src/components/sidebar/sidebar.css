@@ -3,6 +3,7 @@
     height: calc(100vh - 50px);
     position: sticky;
     top: 50px;
+    background-color: #f7fbff;
 }
 
 .sidebarWrapper {
@@ -38,8 +39,14 @@
 }
 
 .sidebarListItem:hover{
-    background-color: #f3f3f3;
+    background-color: #e5edff;
 }
 .sidebarListItem:active{
-    background-color: #e5e5e5;
+    background-color: #477eff;
+    color: white;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
 }

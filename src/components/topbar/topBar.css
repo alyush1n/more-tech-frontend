@@ -24,7 +24,7 @@
 .logo {
     font-weight: bold;
     font-size: 30px;
-    color: #61dafb;
+    color: #0D2C75;
     cursor: pointer;
 }
 
@@ -43,4 +43,9 @@
     border-radius: 50%;
     cursor: pointer;
     margin-right: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
 }
