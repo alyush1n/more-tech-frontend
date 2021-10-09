@@ -4,6 +4,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Datasets from "./pages/datasets/Datasets";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from "./pages/home/Home";
+import DatasetPage from "./pages/datasetPage/DatasetPage";
+import CreateDataset from "./pages/createDataset/CreateDataset";
 
 function App() {
     return (
@@ -12,11 +14,17 @@ function App() {
             <div className="container">
                 <Sidebar/>
                 <Switch>
-                    <Route exact path="/">
-                        <Home/>
+                    <Route path="/datasets/create">
+                        <CreateDataset/>
+                    </Route>
+                    <Route path="/datasets/1">
+                        <DatasetPage/>
                     </Route>
                     <Route path="/datasets">
                         <Datasets/>
+                    </Route>
+                    <Route exact path="/">
+                        <Home/>
                     </Route>
                 </Switch>
             </div>

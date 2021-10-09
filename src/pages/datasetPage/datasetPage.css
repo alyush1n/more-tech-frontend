@@ -1,0 +1,16 @@
+.datasetPage {
+    flex: 4;
+    margin: 32px;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+
+td {
+    margin: 0;
+    padding: 0.5rem;
+}
