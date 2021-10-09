@@ -1,22 +1,24 @@
 import React from 'react';
 import './datasetPage.css';
 import {useTable} from 'react-table';
+import {useSelector, useDispatch} from "react-redux"
 
 const DatasetPage = () => {
-
+    const paths = useSelector((state) => state.paths)  
+    const dispatch = useDispatch()
     const data = React.useMemo(
         () => [
             {
-                col1: 'Hello',
-                col2: 'World',
+                col1: 'Name',
+                col2: 'string',
             },
             {
-                col1: 'react-table',
-                col2: 'rocks',
+                col1: 'Surname',
+                col2: 'string',
             },
             {
-                col1: 'whatever',
-                col2: 'you want',
+                col1: 'Login',
+                col2: 'string',
             },
         ],
         []
@@ -24,11 +26,11 @@ const DatasetPage = () => {
     const columns = React.useMemo(
         () => [
             {
-                Header: 'Column 1',
+                Header: 'Название поля',
                 accessor: 'col1', // accessor is the "key" in the data
             },
             {
-                Header: 'Column 2',
+                Header: 'Тип',
                 accessor: 'col2',
             },
         ],
@@ -46,7 +48,7 @@ const DatasetPage = () => {
     return (
         <div className="datasetPage">
 
-            <h3 className="datasetTitle">Dataset 1</h3>
+            <h3 className="datasetTitle">Пользователь</h3>
 
             <table {...getTableProps()}>
                 <thead>
