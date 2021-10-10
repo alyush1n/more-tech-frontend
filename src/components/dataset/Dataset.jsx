@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 
 const Dataset = (props) => {
   const { browsePath } = useParams();
-  console.log(browsePath);
+//   console.log(browsePath);
   return (
     <div className="dataset">
       <div className="datasetWrapper">

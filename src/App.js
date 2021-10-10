@@ -8,38 +8,53 @@ import DatasetPage from "./pages/datasetPage/DatasetPage";
 import CreateDataset from "./pages/createDataset/CreateDataset";
 import React from "react";
 import Preloader from "./components/Preloader";
+import Guard from "./pages/login/Guard";
+import Login from "./pages/login/Login";
+import ViewDatasets from "./pages/viewDatasets/viewDataset";
+import ViewDataset from "./pages/ViewDataset/ViewDataset";
 
 function App() {
   return (
     <React.Fragment>
-        <Preloader />
+      <Preloader />
       <Router>
-        <TopBar />
-        <div className="container">
-          <Sidebar />
-          <Switch>
-            <Route path="/datasets/create">
-              <CreateDataset />
-            </Route>
-            <Route path="/datasets/view/:urn">
-              <DatasetPage />
-            </Route>
-            <Route path="/datasets/:browsePath">
-              <Datasets />
-            </Route>
-            {/* <Route path="/datasets/1">
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Guard>
+            <TopBar />
+            <div className="container">
+              <Sidebar />
+              <Route exact path="/dataset/create">
+                <CreateDataset />
+              </Route>
+              <Route exact path="/datasets/:datasetID">
+                <ViewDataset />
+              </Route>
+              <Route exact path="/datasets">
+                <ViewDatasets />
+              </Route>
+              
+              <Route exact path="/models/view/:urn">
+                <DatasetPage />
+              </Route>
+              <Route exact path="/models/:browsePath">
+                <Datasets />
+              </Route>
+              {/* <Route path="/datasets/1">
                         <DatasetPage/>
                     </Route> */}
-            <Route path="/datasets">
-              <Datasets />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </div>
+              <Route exact path="/models">
+                <Datasets />
+              </Route>
+              <Route exact path="/dashboard">
+                <Home />
+              </Route>
+            </div>
+          </Guard>
+        </Switch>
       </Router>
-      
     </React.Fragment>
   );
 }

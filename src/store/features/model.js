@@ -3,20 +3,21 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   name: "",
   fields: [
-    {
-      fieldPath: "",
-      type: "",
-    },
+    // {
+    //   fieldPath: "",
+    //   type: "",
+    // },
   ],
 };
 
-export const authSlice = createSlice({
+export const modelSlice = createSlice({
   name: "model",
   initialState,
   reducers: {
     addModel: (state, action) => {
+      console.log(action.payload)
       state.name = action.payload?.name;
-      state.fields = action.payload?.fields;
+      state.fields = action.payload?.schemaMetadata?.fields;
     },
     // incrementByAmount: (state, action) => {
     //   state.value += action.payload;
@@ -27,5 +28,5 @@ export const authSlice = createSlice({
 export const {
   addModel,
   // incrementByAmount
-} = authSlice.actions;
-export default authSlice.reducer;
+} = modelSlice.actions;
+export default modelSlice.reducer;

@@ -5,7 +5,7 @@ import './button.css'
 const Button = (props) => {
     return (
         <div className="button">
-            <Link to="/datasets/create">
+            <Link to="/dataset/create">
                 {props.buttonText}
             </Link>
         </div>

@@ -1,14 +1,14 @@
-import React, {useEffect} from "react";
-import "./datasetPage.css";
+import React, { useEffect } from "react";
+// import "./datasetPage.css";
 import { useTable } from "react-table";
 import { useSelector, useDispatch } from "react-redux";
-import { getEntity } from "../../store/features/pathMiddlewares";
-import { useParams } from "react-router";
+// import { getEntity } from "../../store/features/pathMiddlewares";
+// import { useParams } from "react-router";
 
 const DatasetPage = () => {
-  const model = useSelector((state) => state.model);
+  const dataset = useSelector((state) => state.datasets);
   const dispatch = useDispatch();
-  const { urn } = useParams();
+  // const { urn } = useParams();
   // const data = React.useMemo(
   //     () => [
   //         {
@@ -30,24 +30,30 @@ const DatasetPage = () => {
     () => [
       {
         Header: "Название поля",
-        accessor: "fieldPath", // accessor is the "key" in the data
+        accessor: "name", // accessor is the "key" in the data
       },
       {
         Header: "Тип",
         accessor: "type",
       },
+      {
+        Header: "Правило",
+        accessor: "rule.operation",
+      },
     ],
     []
   );
-    const data = model?.fields?.length ? model?.fields : [];
+  const data = dataset?.currentDataset?.fields?.length
+    ? dataset?.currentDataset?.fields
+    : [];
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data, });
-  useEffect(() => {
-    dispatch(getEntity(urn));
-  }, [urn]);
+    useTable({ columns, data });
+  // useEffect(() => {
+  //   dispatch(getEntity(urn));
+  // }, [urn]);
   return (
     <div className="datasetPage">
-      <h3 className="datasetTitle">{model.name}</h3>
+      {/* <h3 className="datasetTitle">{model.name}</h3> */}
 
       <table {...getTableProps()}>
         <thead>

@@ -1,0 +1,28 @@
+{
+    "name":"Test 1",
+    "description":"sdadasd",
+    "fields":[
+        {
+            "name":"user_id",
+            "type":"string",
+            "rule":{
+                "description":"",
+                "operation":"",
+                "fields":["a","b"]
+            }
+        }
+    ],
+    "joins":[
+        {
+            "left":{
+                "dataset_id":"",
+                "field_name":"a"
+            },
+            "operator": "eq",
+            "right":{
+                "dataset_id":"",
+                "field_name":"b"
+            }
+        }
+    ]
+}

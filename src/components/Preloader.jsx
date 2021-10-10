@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const Preloader = () => {
   const loading = useSelector((state) => state.loading);
-  console.log(loading.load);
+//   console.log(loading.load);
   return (
     <>
       {loading.load ? (

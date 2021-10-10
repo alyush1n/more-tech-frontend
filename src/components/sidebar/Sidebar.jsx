@@ -10,8 +10,14 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Данные</h3>
                     <ul className="sidebarList">
-                        <Link to="/datasets" className="link">
+                        <Link to="/models" className="link">
                         <li className="sidebarListItem active">
+                            <DescriptionIcon className="sidebarIcon"/>
+                            Модели
+                        </li>
+                        </Link>
+                        <Link to="/datasets" className="link">
+                        <li className="sidebarListItem">
                             <DescriptionIcon className="sidebarIcon"/>
                             Датасеты
                         </li>
