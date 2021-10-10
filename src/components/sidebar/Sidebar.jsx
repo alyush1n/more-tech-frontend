@@ -1,6 +1,7 @@
 import React from 'react';
 import './sidebar.css'
 import DescriptionIcon from "@mui/icons-material/Description";
+import CategoryIcon from '@mui/icons-material/Category';
 import {Link} from "react-router-dom";
 
 const Sidebar = () => {
@@ -11,16 +12,16 @@ const Sidebar = () => {
                     <h3 className="sidebarTitle">Данные</h3>
                     <ul className="sidebarList">
                         <Link to="/models" className="link">
-                        <li className="sidebarListItem active">
-                            <DescriptionIcon className="sidebarIcon"/>
-                            Модели
-                        </li>
+                            <li className="sidebarListItem active">
+                                <CategoryIcon className="sidebarIcon"/>
+                                Модели
+                            </li>
                         </Link>
                         <Link to="/datasets" className="link">
-                        <li className="sidebarListItem">
-                            <DescriptionIcon className="sidebarIcon"/>
-                            Датасеты
-                        </li>
+                            <li className="sidebarListItem">
+                                <DescriptionIcon className="sidebarIcon"/>
+                                Датасеты
+                            </li>
                         </Link>
                     </ul>
                 </div>

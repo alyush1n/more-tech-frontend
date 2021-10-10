@@ -1,5 +1,6 @@
 .dataset {
     display: flex;
+    flex: 4;
     flex-direction: column;
     margin-bottom: 16px;
     margin-right: 32px;

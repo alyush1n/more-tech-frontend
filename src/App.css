@@ -1,4 +1,13 @@
 .container {
-  display: flex;
-  background-color: #f6f6f6;
+    display: flex;
+    background-color: #f6f6f6;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
 }

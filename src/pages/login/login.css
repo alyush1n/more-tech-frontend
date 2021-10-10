@@ -1,0 +1,36 @@
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    text-decoration: none;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+}
+
+.button:hover{
+    background-color: #e5edff;
+}
+.button:active{
+    background-color: #477eff;
+    color: white;
+}
+
+.loginInput {
+    height: 32px;
+    margin-left: 8px;
+}
+
+.inputWithLabel {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 5px;
+}

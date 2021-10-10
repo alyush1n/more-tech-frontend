@@ -1,6 +1,10 @@
+.viewDataset {
+    flex: 4;
+    margin: 32px;
+}
+
 .button {
-    text-decoration: none;
-    color: #555555;
+    font-family: Montserrat, sans-serif;
     padding: 5px;
     cursor: pointer;
     display: flex;

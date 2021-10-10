@@ -1,29 +1,31 @@
 import React, {useState} from 'react'
-import {useSelector,useDispatch} from "react-redux"
-import { Redirect } from 'react-router'
+import {useSelector, useDispatch} from "react-redux"
+import {Redirect} from 'react-router'
 import {loginFunction} from "../../store/features/authThunk"
+import './login.css'
 
 const Login = (props) => {
     const [login, setLogin] = useState("")
     const [password, setPassword] = useState("")
-    const auth = useSelector(state=>state.auth)
+    const auth = useSelector(state => state.auth)
     const dispatch = useDispatch()
     return (
-        <div>
+        <div className="loginPage">
             {auth.isAuth
-            ? <Redirect to={"/dashboard"} />
-            : (
-                <>
-            <h3>Login form</h3>
-            <div>
-                <p>Логин <input type="text" onChange={e=>setLogin(e.target.value)} /></p>
-                <p>Пароль <input type="text" onChange={e=>setPassword(e.target.value)} /></p>
-                <button onClick={
-                    ()=>dispatch(loginFunction(login, password))
-                }>Войти</button>
-            </div>
-            </>
-            )}
+                ? <Redirect to={"/dashboard"}/>
+                : (
+                    <>
+                        <h1>Авторизация</h1>
+                        <div>
+                            <p className="inputWithLabel">Логин <input className="loginInput" type="text" onChange={e => setLogin(e.target.value)}/></p>
+                            <p className="inputWithLabel">Пароль <input className="loginInput" type="text" onChange={e => setPassword(e.target.value)}/></p>
+                            <button className="button" onClick={
+                                () => dispatch(loginFunction(login, password))
+                            }>Войти
+                            </button>
+                        </div>
+                    </>
+                )}
         </div>
     )
 }
