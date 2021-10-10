@@ -43,8 +43,8 @@ const DatasetPage = () => {
         ],
         []
     );
-    const data = dataset?.currentDataset?.fields?.length
-        ? dataset?.currentDataset?.fields
+    const data = dataset?.currentDataset?.struct?.fields?.length
+        ? dataset?.currentDataset?.struct?.fields
         : [];
     const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} =
         useTable({columns, data});

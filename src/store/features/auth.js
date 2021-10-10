@@ -5,7 +5,8 @@ const initialState = {
   user:{
     firstName:"",
     lastName:"",
-    email:""
+    email:"",
+    balance:0,
   },
   tokens:{}
 };
